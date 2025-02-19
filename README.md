@@ -10,7 +10,8 @@ This project extracts and embeds eConsult templates to enable similarity searche
    git clone <repository_url>
    cd eConsult-embeddings
 
-2. Install dependencies:
+2. **Install dependencies:**
+```bash
 pip install -r requirements.txt
 
 
