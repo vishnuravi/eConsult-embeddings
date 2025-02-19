@@ -4,25 +4,11 @@
 This project extracts and embeds eConsult templates to enable similarity searches between clinical questions and the appropriate eConsult templates. The system uses embeddings to recommend the most relevant template based on cosine similarity scores.
 
 
-## Project Structure
-eConsult-embeddings/
-│
-├── data/                         # Contains extracted .txt files & .docx templates
-│   ├── *.docx                     # Raw eConsult templates
-│   └── *_extracted.txt            # Extracted text from each template
-│
-├── embeddings/
-│   ├── embedding_generator.py    # Embeds templates & runs similarity checks
-│   └── extract_all_templates.py  # Extracts text from all templates
-│
-├── requirements.txt              # Dependencies
-└── README.md                     # Project documentation
-
 ## Installation
-1. Clone the repository:
-
-git clone <repository_url>
-cd eConsult-embeddings
+1. **Clone the repository:**
+   ```bash
+   git clone <repository_url>
+   cd eConsult-embeddings
 
 2. Install dependencies:
 pip install -r requirements.txt
