@@ -13,7 +13,7 @@ This project extracts and embeds eConsult templates to enable similarity searche
 2. **Install dependencies:**
 ```bash
 pip install -r requirements.txt
-
+```
 
 ## How to Use
 ✅ 1. Extract Text from Templates
