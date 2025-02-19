@@ -1,5 +1,7 @@
-sentence-transformers
+langchain
+langchain-huggingface
 faiss-cpu
-numpy
+sentence-transformers
+scikit-learn
 python-docx
-
+numpy
