@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ```
 
 ## How to Use
-✅ 1. Extract Text from Templates
+ 1. Extract Text from Templates
 This script will extract text from all .docx templates and save them as .txt files in the data/ folder.
 ```bash
 python3 embeddings/extract_all_templates.py
@@ -29,7 +29,7 @@ You will see outputs like:
 ...
 ```
 
-✅ 2. Run Embedding & Similarity Search
+2. Run Embedding & Similarity Search
 Use this script to embed all templates and run similarity searches against a clinical question.
 ```bash
 python3 embeddings/embedding_generator.py
@@ -49,3 +49,30 @@ Neurology eConsult Checklists.docx: 0.3993
 ...
 🏆 Suggested Template: Endocrinology eConsult Checklists FINAL 4.19.22.docx (Score: 0.9142)
 ```
+
+## API Usage
+
+### Local Development
+
+Start the API server locally with hot reloading:
+
+```bash
+python -m uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+The following will be available:
+- [http://localhost:8000](http://localhost:8000) → Health check
+- [http://localhost:8000/docs](http://localhost:8000/docs) → Swagger UI (interactive testing)
+
+### Example Usage via Swagger UI
+
+1. Visit [http://localhost:8000/docs](http://localhost:8000/docs)
+2. Expand the `POST /select-best-template` section
+3. Click **"Try it out"**
+4. Enter your question as:
+   ```json
+   {
+     "question": "What are the best insulin management strategies for type 2 diabetes?"
+   }
+   ```
+5. Click **"Execute"**
